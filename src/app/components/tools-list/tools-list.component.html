@@ -1,0 +1,13 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Tools</h2>
+    <div class="row row-cols-2 row-cols-md-4 g-4">
+      <div class="col" *ngFor="let tool of tools">
+        <div class="card h-100 text-center" [routerLink]="[tool.route]" style="cursor: pointer;">
+          <div class="card-body">
+            <i class="bi" [ngClass]="tool.icon"></i>
+            <h5 class="card-title mt-3">{{tool.name}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
