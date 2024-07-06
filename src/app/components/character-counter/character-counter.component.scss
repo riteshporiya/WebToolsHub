@@ -1,0 +1,86 @@
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.content-container {
+  display: flex;
+  gap: 20px;
+}
+
+textarea {
+  flex: 2;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.word-density {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: left;
+}
+
+.button-container {
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.btn-clear, .btn-copy {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-clear {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.btn-copy {
+  background-color: #f0f0f0;
+  color: #333;
+}
