@@ -1,0 +1,43 @@
+<div class="container">
+    <h1>Text To ASCII Converter</h1>
+    <p class="subtitle">Convert between Text, Binary, Hexadecimal, and ASCII formats</p>
+
+    <div class="input-container">
+        <textarea [(ngModel)]="inputText" placeholder="Start typing, or paste your text"></textarea>
+        <div class="action-buttons">
+            <button (click)="clearText()" title="Clear"><i class="fas fa-sync-alt"></i></button>
+        </div>
+
+        <p class="error-message" [hidden]="!errorMessage">{{ errorMessage }}</p>
+    </div>
+
+    <div class="format-selectors">
+        <div class="format-select">
+            <label for="inputFormat">Input Format:</label>
+            <select id="inputFormat" [(ngModel)]="inputFormat">
+                <option value="text">Text</option>
+                <option value="binary">Binary</option>
+                <option value="hex">Hexadecimal</option>
+                <option value="ascii">ASCII</option>
+            </select>
+        </div>
+        <div class="format-select">
+            <label for="outputFormat">Output Format:</label>
+            <select id="outputFormat" [(ngModel)]="outputFormat">
+                <option value="text">Text</option>
+                <option value="binary">Binary</option>
+                <option value="hex">Hexadecimal</option>
+                <option value="ascii">ASCII</option>
+            </select>
+        </div>
+    </div>
+
+    <button (click)="convert()" class="convert-btn">Convert</button>
+
+    <div class="output-container">
+        <textarea [value]="outputText" readonly></textarea>
+        <button (click)="copyToClipboard()" class="copy-btn" title="Copy to Clipboard">
+            <i class="fas fa-copy"></i>
+        </button>
+    </div>
+</div>

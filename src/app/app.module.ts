@@ -10,6 +10,7 @@ import { ToolsListComponent } from './components/tools-list/tools-list.component
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { CommonModule } from '@angular/common';
 import { PasswordGeneratorComponent } from './components/password-generator/password-generator.component';
+import { TextToAsciiComponent } from './components/text-to-ascii/text-to-ascii.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PasswordGeneratorComponent } from './components/password-generator/pass
     CharacterCounterComponent,
     ToolsListComponent,
     BreadcrumbComponent,
-    PasswordGeneratorComponent
+    PasswordGeneratorComponent,
+    TextToAsciiComponent
   ],
   imports: [
     BrowserModule,
