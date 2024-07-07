@@ -9,13 +9,15 @@ import { RouterModule } from '@angular/router';
 import { ToolsListComponent } from './components/tools-list/tools-list.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { CommonModule } from '@angular/common';
+import { PasswordGeneratorComponent } from './components/password-generator/password-generator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharacterCounterComponent,
     ToolsListComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    PasswordGeneratorComponent
   ],
   imports: [
     BrowserModule,
