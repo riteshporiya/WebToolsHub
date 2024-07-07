@@ -1,0 +1,41 @@
+<div class="container">
+    <h1>Online Text Repeater</h1>
+    <p>Text Repeater for WhatsApp, Messenger, SMS, Telegram, and More</p>
+
+    <div class="input-container">
+        <textarea [(ngModel)]="inputText" placeholder="Start typing, or paste your text"></textarea>
+        <button (click)="clearText()">Clear</button>
+    </div>
+
+    <div class="options-container">
+        <div class="repeat-times">
+            <span>Repeat Times</span>
+            <button class="mr-2 ml-2" (click)="decrementRepeat()">-</button>
+            <input type="number" [(ngModel)]="repeatTimes" min="1">
+            <button class="ml-2" (click)="incrementRepeat()">+</button>
+        </div>
+
+        <div class="delimiter-container">
+            <input type="text" [(ngModel)]="delimiter" placeholder="Add Delimiter e.g. '|, |'">
+        </div>
+
+        <div class="new-line-options">
+            <label>
+                <input type="radio" [(ngModel)]="newLine" [value]="true">
+                Add New Line
+            </label>
+            <label>
+                <input type="radio" [(ngModel)]="newLine" [value]="false">
+                Add Space
+            </label>
+        </div>
+    </div>
+
+    <button (click)="repeatText()" class="repeat-button">Repeat Text</button>
+
+    <div class="output-container" *ngIf="outputText">
+        <h3>Here is your repeated text...</h3>
+        <textarea [value]="outputText" readonly></textarea>
+        <button (click)="copyToClipboard()">Copy</button>
+    </div>
+</div>
