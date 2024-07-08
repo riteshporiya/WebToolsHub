@@ -13,6 +13,7 @@ import { PasswordGeneratorComponent } from './components/password-generator/pass
 import { TextToAsciiComponent } from './components/text-to-ascii/text-to-ascii.component';
 import { TextRepeaterComponent } from './components/text-repeater/text-repeater.component';
 import { StringGeneratorComponent } from './components/string-generator/string-generator.component';
+import { IpGeneratorComponent } from './components/ip-generator/ip-generator.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { StringGeneratorComponent } from './components/string-generator/string-g
     PasswordGeneratorComponent,
     TextToAsciiComponent,
     TextRepeaterComponent,
-    StringGeneratorComponent
+    StringGeneratorComponent,
+    IpGeneratorComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,12 @@
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    color: blueviolet;
+}
+
+.bi {
+    font-size: 2rem;
+}
