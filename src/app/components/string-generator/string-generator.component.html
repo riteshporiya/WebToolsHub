@@ -1,0 +1,40 @@
+<div class="container">
+    <h1>Random String Generator</h1>
+    <p>Online Random Number and Letter Generator</p>
+
+    <div class="options-container">
+        <div class="string-options">
+            <span>String Options</span>
+            <div class="option">
+                <label>Length:</label>
+                <button (click)="decrementLength()">-</button>
+                <input type="number" [(ngModel)]="length" min="1">
+                <button (click)="incrementLength()">+</button>
+            </div>
+            <div class="option">
+                <label>Counts:</label>
+                <button (click)="decrementCount()">-</button>
+                <input type="number" [(ngModel)]="count" min="1">
+                <button (click)="incrementCount()">+</button>
+            </div>
+        </div>
+
+        <div class="string-values">
+            <span>String Values</span>
+            <div>
+                <label><input type="checkbox" [(ngModel)]="useUppercase"> Uppercase (A-Z)</label>
+                <label><input type="checkbox" [(ngModel)]="useNumbers"> Numbers (0-9)</label>
+                <label><input type="checkbox" [(ngModel)]="useLowercase"> Lowercase (a-z)</label>
+                <label><input type="checkbox" [(ngModel)]="useSymbols"> Symbols (@#$&)</label>
+            </div>
+        </div>
+    </div>
+
+    <button (click)="generateStrings()" class="generate-button">Regenerate String</button>
+    <a (click)="clearText()" class="btn btn-danger">Clear</a>
+
+    <div class="output-container mt-2">
+        <textarea [value]="generatedStrings" readonly></textarea>
+        <button (click)="copyToClipboard()" class="copy-button">Copy</button>
+    </div>
+</div>

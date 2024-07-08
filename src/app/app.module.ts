@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 import { PasswordGeneratorComponent } from './components/password-generator/password-generator.component';
 import { TextToAsciiComponent } from './components/text-to-ascii/text-to-ascii.component';
 import { TextRepeaterComponent } from './components/text-repeater/text-repeater.component';
+import { StringGeneratorComponent } from './components/string-generator/string-generator.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TextRepeaterComponent } from './components/text-repeater/text-repeater.
     BreadcrumbComponent,
     PasswordGeneratorComponent,
     TextToAsciiComponent,
-    TextRepeaterComponent
+    TextRepeaterComponent,
+    StringGeneratorComponent
   ],
   imports: [
     BrowserModule,

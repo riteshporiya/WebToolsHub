@@ -15,7 +15,7 @@ export class ToolsListComponent {
     // { name: 'World Clock', icon: 'bi-globe', route: '/world-clock' },
     { name: 'Text to ASCII', icon: 'bi-file-text', route: '/text-to-ascii' },
     { name: 'Text Repeater', icon: 'bi-type', route: '/text-repeater' },
-    // { name: 'Random String Generator', icon: 'bi-shuffle', route: '/random-string' },
+    { name: 'Random String Generator', icon: 'bi-shuffle', route: '/random-string' },
     // { name: 'Random IP Generator', icon: 'bi-hdd-network', route: '/random-ip' },
     // { name: 'Hash Generator', icon: 'bi-hash', route: '/hash-generator' },
     // { name: 'UUID Generator', icon: 'bi-upc-scan', route: '/uuid-generator' },
