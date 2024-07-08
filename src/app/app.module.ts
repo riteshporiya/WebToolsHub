@@ -15,6 +15,7 @@ import { TextRepeaterComponent } from './components/text-repeater/text-repeater.
 import { StringGeneratorComponent } from './components/string-generator/string-generator.component';
 import { IpGeneratorComponent } from './components/ip-generator/ip-generator.component';
 import { HashGeneratorComponent } from './components/hash-generator/hash-generator.component';
+import { UuidGeneratorComponent } from './components/uuid-generator/uuid-generator.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HashGeneratorComponent } from './components/hash-generator/hash-generat
     TextRepeaterComponent,
     StringGeneratorComponent,
     IpGeneratorComponent,
-    HashGeneratorComponent
+    HashGeneratorComponent,
+    UuidGeneratorComponent
   ],
   imports: [
     BrowserModule,

@@ -18,7 +18,7 @@ export class ToolsListComponent {
     { name: 'Random String Generator', icon: 'bi-shuffle', route: '/random-string' },
     { name: 'Random IP Generator', icon: 'bi-hdd-network', route: '/random-ip' },
     // { name: 'Hash Generator', icon: 'bi-hash', route: '/hash-generator' },
-    // { name: 'UUID Generator', icon: 'bi-upc-scan', route: '/uuid-generator' },
+    { name: 'UUID Generator', icon: 'bi-upc-scan', route: '/uuid-generator' },
     // { name: 'Numbers To Words Converter', icon: 'bi-123', route: '/numbers-to-words' },
     // { name: 'Time Zone Converter', icon: 'bi-clock', route: '/time-zone-converter' },
     // { name: 'Passport Photo Generator', icon: 'bi-camera', route: '/passport-photo' },

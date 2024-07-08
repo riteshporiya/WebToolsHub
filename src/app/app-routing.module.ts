@@ -8,6 +8,7 @@ import { TextRepeaterComponent } from './components/text-repeater/text-repeater.
 import { StringGeneratorComponent } from './components/string-generator/string-generator.component';
 import { IpGeneratorComponent } from './components/ip-generator/ip-generator.component';
 import { HashGeneratorComponent } from './components/hash-generator/hash-generator.component';
+import { UuidGeneratorComponent } from './components/uuid-generator/uuid-generator.component';
 
 const routes: Routes = [
   { path: '', component: ToolsListComponent, data: { title: 'Tools: Popular Free Online Web Tools' } },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'random-string', component: StringGeneratorComponent, data: { title: 'Random String Generator Tool' } },
   { path: 'random-ip', component: IpGeneratorComponent, data: { title: 'Random IP Generator Tool' } },
   // { path: 'hash-generator', component: HashGeneratorComponent, data: { title: 'Hash Generator - MD5, SHA-256, SHA512 Hash Calculator' } },
+  { path: 'uuid-generator', component: UuidGeneratorComponent, data: { title: 'Free UUID Generator: Sort Universally Unique Identifiew' } },
 ];
 
 @NgModule({
