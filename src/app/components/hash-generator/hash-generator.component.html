@@ -1,0 +1,26 @@
+<div class="container mt-4">
+    <h1 class="text-center">Hash Generator</h1>
+    <p class="text-center text-muted">Generate All Hashes – MD5, SHA512, SHA256, CRC32 Online hash Calculator</p>
+
+    <div class="mb-3">
+        <select class="form-select" [(ngModel)]="selectedAlgorithm">
+            <option *ngFor="let algo of algorithms" [value]="algo">{{algo}}</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <textarea class="form-control" rows="5" placeholder="Start typing, or paste your text"
+            [(ngModel)]="inputText"></textarea>
+    </div>
+
+    <div class="text-center mb-3">
+        <button class="btn btn-primary" (click)="generateHash()">Generate Hash</button>
+    </div>
+
+    <div *ngIf="generatedHash" class="alert alert-secondary">
+        {{generatedHash}}
+        <button class="btn btn-sm btn-outline-secondary float-end" (click)="copyToClipboard()">
+            <i class="bi bi-clipboard"></i>
+        </button>
+    </div>
+</div>

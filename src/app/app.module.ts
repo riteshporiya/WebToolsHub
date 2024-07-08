@@ -14,6 +14,7 @@ import { TextToAsciiComponent } from './components/text-to-ascii/text-to-ascii.c
 import { TextRepeaterComponent } from './components/text-repeater/text-repeater.component';
 import { StringGeneratorComponent } from './components/string-generator/string-generator.component';
 import { IpGeneratorComponent } from './components/ip-generator/ip-generator.component';
+import { HashGeneratorComponent } from './components/hash-generator/hash-generator.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { IpGeneratorComponent } from './components/ip-generator/ip-generator.com
     TextToAsciiComponent,
     TextRepeaterComponent,
     StringGeneratorComponent,
-    IpGeneratorComponent
+    IpGeneratorComponent,
+    HashGeneratorComponent
   ],
   imports: [
     BrowserModule,
