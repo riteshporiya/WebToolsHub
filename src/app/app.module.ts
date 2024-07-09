@@ -16,6 +16,7 @@ import { StringGeneratorComponent } from './components/string-generator/string-g
 import { IpGeneratorComponent } from './components/ip-generator/ip-generator.component';
 import { HashGeneratorComponent } from './components/hash-generator/hash-generator.component';
 import { UuidGeneratorComponent } from './components/uuid-generator/uuid-generator.component';
+import { NumberWordConverterComponent } from './components/number-word-converter/number-word-converter.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { UuidGeneratorComponent } from './components/uuid-generator/uuid-generat
     StringGeneratorComponent,
     IpGeneratorComponent,
     HashGeneratorComponent,
-    UuidGeneratorComponent
+    UuidGeneratorComponent,
+    NumberWordConverterComponent
   ],
   imports: [
     BrowserModule,

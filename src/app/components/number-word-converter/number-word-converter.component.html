@@ -1,0 +1,55 @@
+<div class="container mt-5">
+    <h2 class="mb-4">Numbers To Words Converter</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="inputValue" class="form-label">Convert this Number</label>
+                <input type="number" class="form-control" id="inputValue" [(ngModel)]="inputValue" (input)="convert()"
+                    placeholder="Enter a number">
+            </div>
+
+            <div class="mb-3">
+                <label for="localeSelect" class="form-label">Select Locale</label>
+                <select class="form-select" id="localeSelect" [(ngModel)]="selectedLocale" (change)="onLocaleChange()">
+                    <option *ngFor="let locale of localeOptions" [value]="locale.code">{{locale.name}}</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Letter Case</label>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="letterCase" id="lowercase" [(ngModel)]="letterCase"
+                        value="lowercase" (change)="convert()" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="lowercase">lowercase</label>
+
+                    <input type="radio" class="btn-check" name="letterCase" id="UPPERCASE" [(ngModel)]="letterCase"
+                        value="UPPERCASE" (change)="convert()" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="UPPERCASE">UPPERCASE</label>
+
+                    <input type="radio" class="btn-check" name="letterCase" id="sentenceCase" [(ngModel)]="letterCase"
+                        value="Sentence-case" (change)="convert()" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="sentenceCase">Sentence case</label>
+
+                    <input type="radio" class="btn-check" name="letterCase" id="titleCase" [(ngModel)]="letterCase"
+                        value="Title-Case" (change)="convert()" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="titleCase">Title Case</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="outputValue" class="form-label">Result</label>
+                <div class="position-relative">
+                    <textarea class="form-control" id="outputValue" rows="3" [(ngModel)]="outputValue"
+                        readonly></textarea>
+                    <button class="btn btn-outline-primary position-absolute top-0 end-0 m-2" (click)="copyOutput()">
+                        <i class="bi" [ngClass]="isCopied ? 'bi-check' : 'bi-clipboard'"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-outline-primary me-2" (click)="clearInput()">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
