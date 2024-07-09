@@ -1,0 +1,49 @@
+<div class="container mt-4">
+    <h2 class="mb-4">Money Counter Calculator Online</h2>
+    <div class="form-group">
+        <select class="form-control" (change)="onCurrencyChange($event)">
+            <option *ngFor="let currency of currencies" [value]="currency.currencyCode">
+                {{currency.currencyName}}
+            </option>
+        </select>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h4>How Many Notes?</h4>
+            <div *ngFor="let note of selectedCurrency.noteLabel; let i = index" class="form-group row">
+                <label class="col-sm-3 col-form-label">{{note}}</label>
+                <div class="col-sm-6">
+                    <input type="number" class="form-control" [(ngModel)]="noteCoinArray.notes[i]">
+                </div>
+                <div class="col-sm-3">
+                    <span>= {{(noteCoinArray.notes[i] || 0) * selectedCurrency.currencyNotes[i]}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h4>How Many Coins?</h4>
+            <div *ngFor="let coin of selectedCurrency.coinLabel; let i = index" class="form-group row">
+                <label class="col-sm-3 col-form-label">{{coin}}</label>
+                <div class="col-sm-6">
+                    <input type="number" class="form-control" [(ngModel)]="noteCoinArray.coins[i]">
+                </div>
+                <div class="col-sm-3">
+                    <span>= {{((noteCoinArray.coins[i] || 0) * selectedCurrency.currencyCoins[i]).toFixed(2)}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <button class="btn btn-primary" style="margin-right: 0.5rem;" (click)="calculateCurrency()">Calculate</button>
+        <button class="btn btn-secondary" (click)="resetCalculator()">Clear</button>
+    </div>
+
+    <div class="mt-4">
+        <h4>Total Amount = {{selectedCurrency.currencySign}} {{totalAmount}}</h4>
+        <p>Number of notes = {{countOfNotes}}</p>
+        <p>Number of coins = {{countOfCoins}}</p>
+    </div>
+</div>

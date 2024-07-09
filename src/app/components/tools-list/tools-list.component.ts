@@ -24,7 +24,7 @@ export class ToolsListComponent {
     // { name: 'Passport Photo Generator', icon: 'bi-camera', route: '/passport-photo' },
     // { name: 'Online Chart Maker', icon: 'bi-bar-chart', route: '/chart-maker' },
     // { name: 'Image to Icon Converter', icon: 'bi-image', route: '/image-to-icon' },
-    // { name: 'Money Counter Calculator', icon: 'bi-cash-stack', route: '/money-counter' },
+    { name: 'Money Counter Calculator', icon: 'bi-cash-stack', route: '/money-counter-calculator' },
     // { name: 'IP Subnet Calculator', icon: 'bi-diagram-3', route: '/ip-subnet-calculator' },
     // { name: 'CSS Formatter', icon: 'bi-file-earmark-code', route: '/css-formatter' }
   ];
