@@ -19,6 +19,8 @@ import { UuidGeneratorComponent } from './components/uuid-generator/uuid-generat
 import { NumberWordConverterComponent } from './components/number-word-converter/number-word-converter.component';
 import { MoneyCalculatorComponent } from './components/money-calculator/money-calculator.component';
 import { IpSubnetCalculatorComponent } from './components/ip-subnet-calculator/ip-subnet-calculator.component';
+import { CssFormatterComponent } from './css-formatter/css-formatter.component';
+import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 
 @NgModule({
   declarations: [
@@ -35,14 +37,16 @@ import { IpSubnetCalculatorComponent } from './components/ip-subnet-calculator/i
     UuidGeneratorComponent,
     NumberWordConverterComponent,
     MoneyCalculatorComponent,
-    IpSubnetCalculatorComponent
+    IpSubnetCalculatorComponent,
+    CssFormatterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    MonacoEditorModule.forRoot()
   ],
   providers: [Title],
   bootstrap: [AppComponent]

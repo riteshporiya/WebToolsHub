@@ -12,6 +12,7 @@ import { UuidGeneratorComponent } from './components/uuid-generator/uuid-generat
 import { NumberWordConverterComponent } from './components/number-word-converter/number-word-converter.component';
 import { MoneyCalculatorComponent } from './components/money-calculator/money-calculator.component';
 import { IpSubnetCalculatorComponent } from './components/ip-subnet-calculator/ip-subnet-calculator.component';
+import { CssFormatterComponent } from './css-formatter/css-formatter.component';
 
 const routes: Routes = [
   { path: '', component: ToolsListComponent, data: { title: 'Tools: Popular Free Online Web Tools' } },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'numbers-to-words', component: NumberWordConverterComponent, data: { title: 'Numbers To Words Converter Currency Wise' } },
   { path: 'money-counter-calculator', component: MoneyCalculatorComponent, data: { title: 'Money Counter Calculator - Cash Counting' } },
   { path: 'ip-subnet-calculator', component: IpSubnetCalculatorComponent, data: { title: 'IP Subnet Calculator for IPv4 | CIDR Calculator' } },
+  { path: 'css-formatter', component: CssFormatterComponent, data: { title: 'CSS Formatter | CSS Code Beautifier' } },
 ];
 
 @NgModule({

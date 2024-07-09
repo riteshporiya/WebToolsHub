@@ -26,6 +26,6 @@ export class ToolsListComponent {
     // { name: 'Image to Icon Converter', icon: 'bi-image', route: '/image-to-icon' },
     { name: 'Money Counter Calculator', icon: 'bi-cash-stack', route: '/money-counter-calculator' },
     { name: 'IP Subnet Calculator', icon: 'bi-diagram-3', route: '/ip-subnet-calculator' },
-    // { name: 'CSS Formatter', icon: 'bi-file-earmark-code', route: '/css-formatter' }
+    { name: 'CSS Formatter', icon: 'bi-file-earmark-code', route: '/css-formatter' }
   ];
 }
