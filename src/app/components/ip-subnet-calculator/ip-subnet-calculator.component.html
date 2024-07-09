@@ -1,0 +1,38 @@
+<div class="container mt-4">
+    <h1 class="text-center">IP Subnet Calculator</h1>
+    <p class="text-center text-muted">
+        Simplify subnetting for IPv4. Our Calculator delivers instant insights into IP, subnet, and network details for
+        efficient analysis.
+    </p>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="IP Address" [(ngModel)]="inputValue"
+                    (input)="handleInputChange($event)">
+                <select class="form-select" style="max-width: 80px;" [(ngModel)]="selectedOption">
+                    <option
+                        *ngFor="let i of bits"
+                        [value]="i">{{i}}</option>
+                </select>
+                <button class="btn btn-primary" type="button" (click)="onSubmitCalculate()">CALCULATE</button>
+            </div>
+            <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+        </div>
+    </div>
+
+    <div *ngIf="result.length > 0" class="row justify-content-center mt-4">
+        <div class="col-md-8">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div *ngFor="let item of result" class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-title">{{ item.name }}</h6>
+                            <p class="card-text">{{ item.value }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

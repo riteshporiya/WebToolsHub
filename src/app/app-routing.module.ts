@@ -11,6 +11,7 @@ import { HashGeneratorComponent } from './components/hash-generator/hash-generat
 import { UuidGeneratorComponent } from './components/uuid-generator/uuid-generator.component';
 import { NumberWordConverterComponent } from './components/number-word-converter/number-word-converter.component';
 import { MoneyCalculatorComponent } from './components/money-calculator/money-calculator.component';
+import { IpSubnetCalculatorComponent } from './components/ip-subnet-calculator/ip-subnet-calculator.component';
 
 const routes: Routes = [
   { path: '', component: ToolsListComponent, data: { title: 'Tools: Popular Free Online Web Tools' } },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'uuid-generator', component: UuidGeneratorComponent, data: { title: 'Free UUID Generator: Sort Universally Unique Identifiew' } },
   { path: 'numbers-to-words', component: NumberWordConverterComponent, data: { title: 'Numbers To Words Converter Currency Wise' } },
   { path: 'money-counter-calculator', component: MoneyCalculatorComponent, data: { title: 'Money Counter Calculator - Cash Counting' } },
+  { path: 'ip-subnet-calculator', component: IpSubnetCalculatorComponent, data: { title: 'IP Subnet Calculator for IPv4 | CIDR Calculator' } },
 ];
 
 @NgModule({
