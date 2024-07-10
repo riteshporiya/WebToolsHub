@@ -72,4 +72,26 @@ export class CssFormatterComponent {
     // Force change detection
     this.cdr.detectChanges();
   }
+
+  handleFileUpload(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.inputCss = e.target.result;
+        this.formatCss();
+      };
+      reader.readAsText(file);
+    }
+  }
+
+  downloadFile() {
+    const blob = new Blob([this.outputCss], { type: 'text/html' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'formatted.css';
+    link.click();
+    window.URL.revokeObjectURL(url);
+  }
 }
