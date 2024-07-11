@@ -14,6 +14,7 @@ import { MoneyCalculatorComponent } from './components/money-calculator/money-ca
 import { IpSubnetCalculatorComponent } from './components/ip-subnet-calculator/ip-subnet-calculator.component';
 import { CssFormatterComponent } from './components/css-formatter/css-formatter.component';
 import { HtmlFormatterComponent } from './components/html-formatter/html-formatter.component';
+import { CaseConverterComponent } from './components/case-converter/case-converter.component';
 
 const routes: Routes = [
   { path: '', component: ToolsListComponent, data: { title: 'Tools: Popular Free Online Web Tools' } },
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'ip-subnet-calculator', component: IpSubnetCalculatorComponent, data: { title: 'IP Subnet Calculator for IPv4 | CIDR Calculator' } },
   { path: 'css-formatter', component: CssFormatterComponent, data: { title: 'CSS Formatter | CSS Code Beautifier' } },
   { path: 'html-formatter', component: HtmlFormatterComponent, data: { title: 'HTML Formatter | HTML Code Beautifier' } },
+  { path: 'case-converter', component: CaseConverterComponent, data: { title: 'Case Converter | Convert Uppercase to Lowercase' } },
 ];
 
 @NgModule({

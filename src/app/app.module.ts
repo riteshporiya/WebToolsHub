@@ -22,6 +22,7 @@ import { IpSubnetCalculatorComponent } from './components/ip-subnet-calculator/i
 import { CssFormatterComponent } from './components/css-formatter/css-formatter.component';
 import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 import { HtmlFormatterComponent } from './components/html-formatter/html-formatter.component';
+import { CaseConverterComponent } from './components/case-converter/case-converter.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { HtmlFormatterComponent } from './components/html-formatter/html-formatt
     MoneyCalculatorComponent,
     IpSubnetCalculatorComponent,
     CssFormatterComponent,
-    HtmlFormatterComponent
+    HtmlFormatterComponent,
+    CaseConverterComponent
   ],
   imports: [
     BrowserModule,
