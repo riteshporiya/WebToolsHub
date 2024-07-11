@@ -23,6 +23,7 @@ import { CssFormatterComponent } from './components/css-formatter/css-formatter.
 import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 import { HtmlFormatterComponent } from './components/html-formatter/html-formatter.component';
 import { CaseConverterComponent } from './components/case-converter/case-converter.component';
+import { JsonParserComponent } from './components/json-parser/json-parser.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CaseConverterComponent } from './components/case-converter/case-convert
     IpSubnetCalculatorComponent,
     CssFormatterComponent,
     HtmlFormatterComponent,
-    CaseConverterComponent
+    CaseConverterComponent,
+    JsonParserComponent
   ],
   imports: [
     BrowserModule,

@@ -28,6 +28,7 @@ export class ToolsListComponent {
     { name: 'IP Subnet Calculator', icon: 'bi-diagram-3', route: '/ip-subnet-calculator' },
     { name: 'CSS Formatter', icon: 'bi-filetype-css', route: '/css-formatter' },
     { name: 'HTML Formatter', icon: 'bi-filetype-html', route: '/html-formatter' },
-    { name: 'Case Converter', icon: 'bi-alphabet-uppercase', route: '/case-converter' }
+    { name: 'Case Converter', icon: 'bi-alphabet-uppercase', route: '/case-converter' },
+    { name: 'JSON Parser', icon: 'bi-filetype-json', route: '/json-parser' }
   ];
 }

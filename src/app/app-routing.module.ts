@@ -15,6 +15,7 @@ import { IpSubnetCalculatorComponent } from './components/ip-subnet-calculator/i
 import { CssFormatterComponent } from './components/css-formatter/css-formatter.component';
 import { HtmlFormatterComponent } from './components/html-formatter/html-formatter.component';
 import { CaseConverterComponent } from './components/case-converter/case-converter.component';
+import { JsonParserComponent } from './components/json-parser/json-parser.component';
 
 const routes: Routes = [
   { path: '', component: ToolsListComponent, data: { title: 'Tools: Popular Free Online Web Tools' } },
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'css-formatter', component: CssFormatterComponent, data: { title: 'CSS Formatter | CSS Code Beautifier' } },
   { path: 'html-formatter', component: HtmlFormatterComponent, data: { title: 'HTML Formatter | HTML Code Beautifier' } },
   { path: 'case-converter', component: CaseConverterComponent, data: { title: 'Case Converter | Convert Uppercase to Lowercase' } },
+  { path: 'json-parser', component: JsonParserComponent, data: { title: 'JSON Parser' } },
 ];
 
 @NgModule({
