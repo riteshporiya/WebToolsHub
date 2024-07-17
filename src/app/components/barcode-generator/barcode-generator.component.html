@@ -1,0 +1,145 @@
+<div class="container mt-4">
+    <h2 class="text-center">Barcode Generator</h2>
+    <p class="text-center text-muted">This barcode generator can help you create UPC-A, EAN-8, EAN-13, code128, and
+        Code93Extension
+        barcodes</p>
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3">
+                        <label for="barcodeData" class="form-label">Barcode data*</label>
+                        <input type="text" class="form-control" id="barcodeData" [(ngModel)]="barcodeData"
+                            placeholder="Example 1234">
+                    </div>
+                    <div class="mb-3">
+                        <label for="barcodeType" class="form-label">Barcode Type</label>
+                        <select class="form-select" id="barcodeType" [(ngModel)]="barcodeType">
+                            <option value="Code128" default>CODE128</option>
+                            <option value="Code39">CODE39</option>
+                            <option value="Code128A">CODE128A</option>
+                            <option value="Code128B">CODE128B</option>
+                            <option value="Code128C">CODE128C</option>
+                            <option value="Codabar">Codabar</option>
+                            <option value="Ean8">EAN-8</option>
+                            <option value="Ean13">EAN-13</option>
+                            <option value="UpcA">UPC-A</option>
+                            <option value="UpcE">UPC-E</option>
+                            <option value="Code11">CODE11</option>
+                            <option value="Code93">CODE93</option>
+                            <option value="Code32">CODE32</option>
+                            <option value="Code93Extension">Code93Extension</option>
+                            <option value="Code39Extension">Code39Extension</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="barcodeTitle" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="barcodeTitle" [(ngModel)]="barcodeTitle"
+                            placeholder="Enter title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="barcodeNote" class="form-label">Note</label>
+                        <input type="text" class="form-control" id="barcodeNote" [(ngModel)]="barcodeNote"
+                            placeholder="Enter note">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Toggle visibility</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="dataVisibility"
+                            [(ngModel)]="toggleVisibility.data">
+                        <label class="form-check-label" for="dataVisibility">Data</label>
+                    </div>
+                    <!-- <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="titleVisibility"
+                            [(ngModel)]="toggleVisibility.title">
+                        <label class="form-check-label" for="titleVisibility">Title</label>
+                    </div> -->
+                    <!-- <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="noteVisibility"
+                            [(ngModel)]="toggleVisibility.note">
+                        <label class="form-check-label" for="noteVisibility">Note</label>
+                    </div> -->
+
+                    <h5 class="card-title mt-3">Background color</h5>
+                    <select class="form-select" [(ngModel)]="backgroundColor" (change)="updateBackgroundColor()">
+                        <option *ngFor="let color of colorOptions" [value]="color.toLowerCase()">{{color}}</option>
+                    </select>
+
+                    <h5 class="card-title mt-3">Line color</h5>
+                    <select class="form-select" [(ngModel)]="lineColor" (change)="updateLineColor()">
+                        <option *ngFor="let color of colorOptions" [value]="color.toLowerCase()">{{color}}</option>
+                    </select>
+
+                    <h5 class="card-title mt-3">Barsize*</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="width" class="form-label">Width</label>
+                            <input type="text" class="form-control" id="width" [(ngModel)]="width" placeholder="500px">
+                        </div>
+                        <div class="col-6">
+                            <label for="height" class="form-label">Height</label>
+                            <input type="text" class="form-control" id="height" [(ngModel)]="height"
+                                placeholder="150px">
+                        </div>
+                    </div>
+
+                    <!-- <h5 class="card-title mt-3">Quality</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quality" id="qualityLow" value="Low"
+                            (change)="setQuality('Low')" [checked]="quality === 0.8">
+                        <label class="form-check-label" for="qualityLow">Low</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quality" id="qualityMedium" value="Medium"
+                            (change)="setQuality('Medium')" [checked]="quality === 1.5">
+                        <label class="form-check-label" for="qualityMedium">Medium</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quality" id="qualityHigh" value="High"
+                            (change)="setQuality('High')" [checked]="quality === 3">
+                        <label class="form-check-label" for="qualityHigh">High</label>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div #barcodeElement>
+                        <ejs-barcodegenerator #barcode id="barcode" style="display: block;" [width]="width"
+                            [height]="height" [type]="barcodeType" [value]="barcodeData" [mode]="barcodeMode"
+                            [displayText]="displayText">
+                        </ejs-barcodegenerator>
+                        <!-- <ejs-barcodegenerator style="display: block;" #barcode id="barcode" width="200px" height="150px"
+                            mode="SVG" type="Code39" value="SYNCFUSION"></ejs-barcodegenerator> -->
+                        <!-- <div *ngIf="toggleVisibility.title">{{ barcodeTitle }}</div>
+                        <div *ngIf="toggleVisibility.note">{{ barcodeNote }}</div> -->
+                    </div>
+                    <div class="mt-3">
+                        <!-- <button class="btn btn-primary me-2" (click)="copyBarcode()"
+                            [disabled]="!isGenerateBarcodeClicked">
+                            {{ isCopied ? 'Copied!' : 'Copy Barcode' }}
+                        </button> -->
+                        <button class="btn btn-success me-2" (click)="generateBarcode()"
+                            [disabled]="!barcodeData">Create Barcode</button>
+                        <button class="btn btn-secondary me-2" (click)="downloadBarcode('PNG')"
+                            [disabled]="!isGenerateBarcodeClicked">PNG</button>
+                        <button class="btn btn-secondary" (click)="downloadBarcode('JPG')"
+                            [disabled]="!isGenerateBarcodeClicked">JPG</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

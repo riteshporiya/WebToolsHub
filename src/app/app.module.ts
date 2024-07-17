@@ -24,6 +24,8 @@ import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 import { HtmlFormatterComponent } from './components/html-formatter/html-formatter.component';
 import { CaseConverterComponent } from './components/case-converter/case-converter.component';
 import { JsonParserComponent } from './components/json-parser/json-parser.component';
+import { BarcodeGeneratorComponent } from './components/barcode-generator/barcode-generator.component';
+import { BarcodeGeneratorAllModule } from '@syncfusion/ej2-angular-barcode-generator';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { JsonParserComponent } from './components/json-parser/json-parser.compon
     CssFormatterComponent,
     HtmlFormatterComponent,
     CaseConverterComponent,
-    JsonParserComponent
+    JsonParserComponent,
+    BarcodeGeneratorComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import { JsonParserComponent } from './components/json-parser/json-parser.compon
     RouterModule,
     FormsModule,
     CommonModule,
-    MonacoEditorModule.forRoot()
+    MonacoEditorModule.forRoot(),
+    BarcodeGeneratorAllModule
   ],
   providers: [Title],
   bootstrap: [AppComponent]

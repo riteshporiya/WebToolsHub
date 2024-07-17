@@ -9,7 +9,7 @@ export class ToolsListComponent {
   tools = [
     { name: 'Password Generator', icon: 'bi-key', route: '/password-generator' },
     { name: 'Character Counter', icon: 'bi-123', route: '/character-counter' },
-    // { name: 'Barcode Generator', icon: 'bi-upc', route: '/barcode-generator' },
+    { name: 'Barcode Generator', icon: 'bi-upc', route: '/barcode-generator' },
     // { name: 'QR Code Generator', icon: 'bi-qr-code', route: '/qr-code-generator' },
     // { name: 'Unit Converter', icon: 'bi-arrow-left-right', route: '/unit-converter' },
     // { name: 'World Clock', icon: 'bi-globe', route: '/world-clock' },
