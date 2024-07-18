@@ -26,6 +26,8 @@ import { CaseConverterComponent } from './components/case-converter/case-convert
 import { JsonParserComponent } from './components/json-parser/json-parser.component';
 import { BarcodeGeneratorComponent } from './components/barcode-generator/barcode-generator.component';
 import { BarcodeGeneratorAllModule } from '@syncfusion/ej2-angular-barcode-generator';
+import { QrCodeGeneratorComponent } from './components/qr-code-generator/qr-code-generator.component';
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { BarcodeGeneratorAllModule } from '@syncfusion/ej2-angular-barcode-gener
     HtmlFormatterComponent,
     CaseConverterComponent,
     JsonParserComponent,
-    BarcodeGeneratorComponent
+    BarcodeGeneratorComponent,
+    QrCodeGeneratorComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { BarcodeGeneratorAllModule } from '@syncfusion/ej2-angular-barcode-gener
     FormsModule,
     CommonModule,
     MonacoEditorModule.forRoot(),
-    BarcodeGeneratorAllModule
+    BarcodeGeneratorAllModule,
+    QRCodeModule
   ],
   providers: [Title],
   bootstrap: [AppComponent]

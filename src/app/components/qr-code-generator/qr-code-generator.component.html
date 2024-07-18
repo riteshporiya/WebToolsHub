@@ -1,0 +1,128 @@
+<div class="container mt-5">
+    <h1 class="mb-4">QR Code Generator</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="qrdata" class="form-label">QR Code Content</label>
+                <input type="text" class="form-control" id="qrdata" [(ngModel)]="qrdata">
+            </div>
+
+            <div class="mb-3">
+                <label for="elementType" class="form-label">Element Type</label>
+                <select class="form-select" id="elementType" [(ngModel)]="elementType">
+                    <option *ngFor="let type of elementTypes" [value]="type">{{type}}</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="errorCorrectionLevel" class="form-label">Error Correction Level</label>
+                <select class="form-select" id="errorCorrectionLevel" [(ngModel)]="errorCorrectionLevel">
+                    <option *ngFor="let level of errorCorrectionLevels" [value]="level">{{level}}</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="width" class="form-label">Width</label>
+                <input type="number" class="form-control" id="width" [(ngModel)]="width">
+            </div>
+
+            <div class="mb-3">
+                <label for="margin" class="form-label">Margin</label>
+                <input type="number" class="form-control" id="margin" [(ngModel)]="margin">
+            </div>
+
+            <div class="mb-3">
+                <label for="scale" class="form-label">Scale</label>
+                <input type="number" class="form-control" id="scale" [(ngModel)]="scale">
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="showImage" [(ngModel)]="showImage">
+                <label class="form-check-label" for="showImage">
+                    Show Image
+                </label>
+            </div>
+
+            <div *ngIf="showImage" class="mb-3">
+                <label for="imageSrc" class="form-label">Image Source</label>
+                <input type="text" class="form-control" id="imageSrc" [(ngModel)]="imageSrc">
+            </div>
+
+            <div *ngIf="showImage" class="mb-3">
+                <label for="imageWidth" class="form-label">Image Width</label>
+                <input type="number" class="form-control" id="imageWidth" [(ngModel)]="imageWidth">
+            </div>
+
+            <div *ngIf="showImage" class="mb-3">
+                <label for="imageHeight" class="form-label">Image Height</label>
+                <input type="number" class="form-control" id="imageHeight" [(ngModel)]="imageHeight">
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="showColors" [(ngModel)]="showColors">
+                <label class="form-check-label" for="showColors">
+                    Show Colors
+                </label>
+            </div>
+
+            <div *ngIf="showColors" class="mb-3">
+                <label for="colorDark" class="form-label">Dark Color</label>
+                <input type="color" class="form-control" id="colorDark" [(ngModel)]="colorDark">
+            </div>
+
+            <div *ngIf="showColors" class="mb-3">
+                <label for="colorLight" class="form-label">Light Color</label>
+                <input type="color" class="form-control" id="colorLight" [(ngModel)]="colorLight">
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="showCss" [(ngModel)]="showCss">
+                <label class="form-check-label" for="showCss">
+                    Show CSS Class
+                </label>
+            </div>
+
+            <div *ngIf="showCss" class="mb-3">
+                <label for="cssClass" class="form-label">CSS Class</label>
+                <select class="form-select" id="cssClass" [(ngModel)]="cssClass">
+                    <option *ngFor="let class of cssClasses" [value]="class">{{class}}</option>
+                </select>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="showA11y" [(ngModel)]="showA11y">
+                <label class="form-check-label" for="showA11y">
+                    Show Accessibility Options
+                </label>
+            </div>
+
+            <div *ngIf="showA11y" class="mb-3">
+                <label for="alt" class="form-label">Alt Text</label>
+                <input type="text" class="form-control" id="alt" [(ngModel)]="alt">
+            </div>
+
+            <div *ngIf="showA11y" class="mb-3">
+                <label for="ariaLabel" class="form-label">Aria Label</label>
+                <input type="text" class="form-control" id="ariaLabel" [(ngModel)]="ariaLabel">
+            </div>
+
+            <div *ngIf="showA11y" class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" [(ngModel)]="title">
+            </div>
+        </div>
+
+        <div class="col-md-6" #qrcodeElement>
+            <qrcode [qrdata]="qrdata" [allowEmptyString]="allowEmptyString" [alt]="showA11y ? alt : ''"
+                [ariaLabel]="showA11y ? ariaLabel : ''" [colorDark]="showColors ? colorDark : '#000000ff'"
+                [colorLight]="showColors ? colorLight : '#ffffffff'" [cssClass]="showCss ? cssClass : ''"
+                [elementType]="elementType" [errorCorrectionLevel]="errorCorrectionLevel" [imageSrc]="showImage ? imageSrc : ''"
+                [imageHeight]="showImage ? imageHeight : undefined" [imageWidth]="showImage ? imageWidth : undefined"
+                [margin]="margin" [scale]="scale" [title]="showA11y ? title : ''" [width]="width" (qrCodeURL)="onChangeURL($event)">
+            </qrcode>
+
+            <button class="btn btn-primary mt-3" (click)="downloadQRCode()">Download QR Code</button>
+        </div>
+    </div>
+</div>

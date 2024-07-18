@@ -17,12 +17,14 @@ import { HtmlFormatterComponent } from './components/html-formatter/html-formatt
 import { CaseConverterComponent } from './components/case-converter/case-converter.component';
 import { JsonParserComponent } from './components/json-parser/json-parser.component';
 import { BarcodeGeneratorComponent } from './components/barcode-generator/barcode-generator.component';
+import { QrCodeGeneratorComponent } from './components/qr-code-generator/qr-code-generator.component';
 
 const routes: Routes = [
   { path: '', component: ToolsListComponent, data: { title: 'Tools: Popular Free Online Web Tools' } },
   { path: 'character-counter', component: CharacterCounterComponent, data: { title: 'Character Counter Tool | Text Character Count' } },
   { path: 'password-generator', component: PasswordGeneratorComponent, data: { title: 'Random Strong Password Generator Tool' } },
   { path: 'barcode-generator', component: BarcodeGeneratorComponent, data: { title: 'Barcode Generator Tool' } },
+  { path: 'qr-code-generator', component: QrCodeGeneratorComponent, data: { title: 'QR Code Generator Tool - Create Free QR code' } },
   { path: 'text-to-ascii', component: TextToAsciiComponent, data: { title: 'Text To ASCII Converter Tool' } },
   { path: 'text-repeater', component: TextRepeaterComponent, data: { title: 'Text Repeater: Text Generator For Messaging' } },
   { path: 'random-string', component: StringGeneratorComponent, data: { title: 'Random String Generator Tool' } },
