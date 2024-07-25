@@ -32,6 +32,9 @@ import { UnitCalculatorsComponent } from './components/unit-calculators/unit-cal
 import { AreaUnitConverterComponent } from './components/area-unit-converter/area-unit-converter.component';
 import { DataTransferRateComponent } from './components/data-transfer-rate/data-transfer-rate.component';
 import { DigitalStorageComponent } from './components/digital-storage/digital-storage.component';
+import { EnergyConverterComponent } from './components/energy-converter/energy-converter.component';
+import { FrequencyConverterComponent } from './components/frequency-converter/frequency-converter.component';
+import { FuelEconomyConverterComponent } from './components/fuel-economy-converter/fuel-economy-converter.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,10 @@ import { DigitalStorageComponent } from './components/digital-storage/digital-st
     UnitCalculatorsComponent,
     AreaUnitConverterComponent,
     DataTransferRateComponent,
-    DigitalStorageComponent
+    DigitalStorageComponent,
+    EnergyConverterComponent,
+    FrequencyConverterComponent,
+    FuelEconomyConverterComponent
   ],
   imports: [
     BrowserModule,

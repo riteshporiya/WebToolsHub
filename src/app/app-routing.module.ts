@@ -22,12 +22,18 @@ import { UnitCalculatorsComponent } from './components/unit-calculators/unit-cal
 import { AreaUnitConverterComponent } from './components/area-unit-converter/area-unit-converter.component';
 import { DataTransferRateComponent } from './components/data-transfer-rate/data-transfer-rate.component';
 import { DigitalStorageComponent } from './components/digital-storage/digital-storage.component';
+import { EnergyConverterComponent } from './components/energy-converter/energy-converter.component';
+import { FrequencyConverterComponent } from './components/frequency-converter/frequency-converter.component';
+import { FuelEconomyConverterComponent } from './components/fuel-economy-converter/fuel-economy-converter.component';
 
 const unitCalculatorRoutes: Routes = [
   { path: '', redirectTo: 'area-unit-converter', pathMatch: 'full' },
   { path: 'area-unit-converter', component: AreaUnitConverterComponent, data: { title: 'Land Area Converter: Calculator for Area Unit Conversion' } },
   { path: 'data-transfer-rate', component: DataTransferRateComponent, data: { title: 'Data Transfer Rate Conterver: Calculate Data Transfer Speed' } },
   { path: 'digital-storage', component: DigitalStorageComponent, data: { title: 'Data Storage Converter: Convert Digital Storage to Unit' } },
+  { path: 'energy-converter', component: EnergyConverterComponent, data: { title: 'Energy Unit Converter: Free Energy Unit Conversion Calculator' } },
+  { path: 'frequency-converter', component: FrequencyConverterComponent, data: { title: 'Online Frequency Converter: Hz to kHz to GHz Free Conversion' } },
+  { path: 'fuel-economy-converter', component: FuelEconomyConverterComponent, data: { title: 'Fuel Economy Converter: liter per Kilometer Conversion Calculator' } },
 ];
 
 const routes: Routes = [
