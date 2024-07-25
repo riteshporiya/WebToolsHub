@@ -25,6 +25,9 @@ import { DigitalStorageComponent } from './components/digital-storage/digital-st
 import { EnergyConverterComponent } from './components/energy-converter/energy-converter.component';
 import { FrequencyConverterComponent } from './components/frequency-converter/frequency-converter.component';
 import { FuelEconomyConverterComponent } from './components/fuel-economy-converter/fuel-economy-converter.component';
+import { LengthConverterComponent } from './components/length-converter/length-converter.component';
+import { MassConverterComponent } from './components/mass-converter/mass-converter.component';
+import { PlaneAngleConverterComponent } from './components/plane-angle-converter/plane-angle-converter.component';
 
 const unitCalculatorRoutes: Routes = [
   { path: '', redirectTo: 'area-unit-converter', pathMatch: 'full' },
@@ -34,6 +37,9 @@ const unitCalculatorRoutes: Routes = [
   { path: 'energy-converter', component: EnergyConverterComponent, data: { title: 'Energy Unit Converter: Free Energy Unit Conversion Calculator' } },
   { path: 'frequency-converter', component: FrequencyConverterComponent, data: { title: 'Online Frequency Converter: Hz to kHz to GHz Free Conversion' } },
   { path: 'fuel-economy-converter', component: FuelEconomyConverterComponent, data: { title: 'Fuel Economy Converter: liter per Kilometer Conversion Calculator' } },
+  { path: 'length-converter', component: LengthConverterComponent, data: { title: 'Distance and Length Converter: Calculator for K/m, Meters, Miles, And More' } },
+  { path: 'mass-converter', component: MassConverterComponent, data: { title: 'Weight &amp; Mass Converter from Kg to Pounds to Ounce to Gram' } },
+  { path: 'plane-angle-converter', component: PlaneAngleConverterComponent, data: { title: 'Plane Angle Unit Converter: Online Calculate Degree, Radian, Grade' } },
 ];
 
 const routes: Routes = [

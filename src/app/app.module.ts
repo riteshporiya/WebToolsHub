@@ -35,6 +35,9 @@ import { DigitalStorageComponent } from './components/digital-storage/digital-st
 import { EnergyConverterComponent } from './components/energy-converter/energy-converter.component';
 import { FrequencyConverterComponent } from './components/frequency-converter/frequency-converter.component';
 import { FuelEconomyConverterComponent } from './components/fuel-economy-converter/fuel-economy-converter.component';
+import { LengthConverterComponent } from './components/length-converter/length-converter.component';
+import { MassConverterComponent } from './components/mass-converter/mass-converter.component';
+import { PlaneAngleConverterComponent } from './components/plane-angle-converter/plane-angle-converter.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,10 @@ import { FuelEconomyConverterComponent } from './components/fuel-economy-convert
     DigitalStorageComponent,
     EnergyConverterComponent,
     FrequencyConverterComponent,
-    FuelEconomyConverterComponent
+    FuelEconomyConverterComponent,
+    LengthConverterComponent,
+    MassConverterComponent,
+    PlaneAngleConverterComponent
   ],
   imports: [
     BrowserModule,
