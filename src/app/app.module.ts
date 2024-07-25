@@ -28,6 +28,10 @@ import { BarcodeGeneratorComponent } from './components/barcode-generator/barcod
 import { BarcodeGeneratorAllModule } from '@syncfusion/ej2-angular-barcode-generator';
 import { QrCodeGeneratorComponent } from './components/qr-code-generator/qr-code-generator.component';
 import { QRCodeModule } from 'angularx-qrcode';
+import { UnitCalculatorsComponent } from './components/unit-calculators/unit-calculators.component';
+import { AreaUnitConverterComponent } from './components/area-unit-converter/area-unit-converter.component';
+import { DataTransferRateComponent } from './components/data-transfer-rate/data-transfer-rate.component';
+import { DigitalStorageComponent } from './components/digital-storage/digital-storage.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +54,11 @@ import { QRCodeModule } from 'angularx-qrcode';
     CaseConverterComponent,
     JsonParserComponent,
     BarcodeGeneratorComponent,
-    QrCodeGeneratorComponent
+    QrCodeGeneratorComponent,
+    UnitCalculatorsComponent,
+    AreaUnitConverterComponent,
+    DataTransferRateComponent,
+    DigitalStorageComponent
   ],
   imports: [
     BrowserModule,

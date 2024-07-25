@@ -18,6 +18,17 @@ import { CaseConverterComponent } from './components/case-converter/case-convert
 import { JsonParserComponent } from './components/json-parser/json-parser.component';
 import { BarcodeGeneratorComponent } from './components/barcode-generator/barcode-generator.component';
 import { QrCodeGeneratorComponent } from './components/qr-code-generator/qr-code-generator.component';
+import { UnitCalculatorsComponent } from './components/unit-calculators/unit-calculators.component';
+import { AreaUnitConverterComponent } from './components/area-unit-converter/area-unit-converter.component';
+import { DataTransferRateComponent } from './components/data-transfer-rate/data-transfer-rate.component';
+import { DigitalStorageComponent } from './components/digital-storage/digital-storage.component';
+
+const unitCalculatorRoutes: Routes = [
+  { path: '', redirectTo: 'area-unit-converter', pathMatch: 'full' },
+  { path: 'area-unit-converter', component: AreaUnitConverterComponent, data: { title: 'Land Area Converter: Calculator for Area Unit Conversion' } },
+  { path: 'data-transfer-rate', component: DataTransferRateComponent, data: { title: 'Data Transfer Rate Conterver: Calculate Data Transfer Speed' } },
+  { path: 'digital-storage', component: DigitalStorageComponent, data: { title: 'Data Storage Converter: Convert Digital Storage to Unit' } },
+];
 
 const routes: Routes = [
   { path: '', component: ToolsListComponent, data: { title: 'Tools: Popular Free Online Web Tools' } },
@@ -25,6 +36,7 @@ const routes: Routes = [
   { path: 'password-generator', component: PasswordGeneratorComponent, data: { title: 'Random Strong Password Generator Tool' } },
   { path: 'barcode-generator', component: BarcodeGeneratorComponent, data: { title: 'Barcode Generator Tool' } },
   { path: 'qr-code-generator', component: QrCodeGeneratorComponent, data: { title: 'QR Code Generator Tool - Create Free QR code' } },
+  { path: 'unit-converter', component: UnitCalculatorsComponent, children: unitCalculatorRoutes,  data: { title: 'Land Area Converter: Calculator for Area Unit Conversion' } },
   { path: 'text-to-ascii', component: TextToAsciiComponent, data: { title: 'Text To ASCII Converter Tool' } },
   { path: 'text-repeater', component: TextRepeaterComponent, data: { title: 'Text Repeater: Text Generator For Messaging' } },
   { path: 'random-string', component: StringGeneratorComponent, data: { title: 'Random String Generator Tool' } },
