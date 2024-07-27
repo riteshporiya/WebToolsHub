@@ -1,6 +1,6 @@
 <div class="container mt-4">
     <h1 class="text-center mb-4">Unit Converter</h1>
-    <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 g-4">
+    <div class="row row-cols-4 row-cols-md-4 row-cols-lg-6 g-4">
         <div class="col" *ngFor="let calc of calculators">
             <div class="card h-100" (click)="selectCalculator(calc.route)" [class.active]="activeRoute === calc.route">
                 <div class="card-body text-center">

@@ -38,6 +38,11 @@ import { FuelEconomyConverterComponent } from './components/fuel-economy-convert
 import { LengthConverterComponent } from './components/length-converter/length-converter.component';
 import { MassConverterComponent } from './components/mass-converter/mass-converter.component';
 import { PlaneAngleConverterComponent } from './components/plane-angle-converter/plane-angle-converter.component';
+import { PressureConverterComponent } from './components/pressure-converter/pressure-converter.component';
+import { SpeedConverterComponent } from './components/speed-converter/speed-converter.component';
+import { TemperatureConverterComponent } from './components/temperature-converter/temperature-converter.component';
+import { TimeConverterComponent } from './components/time-converter/time-converter.component';
+import { VolumeConverterComponent } from './components/volume-converter/volume-converter.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +75,12 @@ import { PlaneAngleConverterComponent } from './components/plane-angle-converter
     FuelEconomyConverterComponent,
     LengthConverterComponent,
     MassConverterComponent,
-    PlaneAngleConverterComponent
+    PlaneAngleConverterComponent,
+    PressureConverterComponent,
+    SpeedConverterComponent,
+    TemperatureConverterComponent,
+    TimeConverterComponent,
+    VolumeConverterComponent
   ],
   imports: [
     BrowserModule,

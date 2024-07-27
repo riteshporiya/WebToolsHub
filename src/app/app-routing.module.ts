@@ -28,6 +28,11 @@ import { FuelEconomyConverterComponent } from './components/fuel-economy-convert
 import { LengthConverterComponent } from './components/length-converter/length-converter.component';
 import { MassConverterComponent } from './components/mass-converter/mass-converter.component';
 import { PlaneAngleConverterComponent } from './components/plane-angle-converter/plane-angle-converter.component';
+import { PressureConverterComponent } from './components/pressure-converter/pressure-converter.component';
+import { SpeedConverterComponent } from './components/speed-converter/speed-converter.component';
+import { TemperatureConverterComponent } from './components/temperature-converter/temperature-converter.component';
+import { TimeConverterComponent } from './components/time-converter/time-converter.component';
+import { VolumeConverterComponent } from './components/volume-converter/volume-converter.component';
 
 const unitCalculatorRoutes: Routes = [
   { path: '', redirectTo: 'area-unit-converter', pathMatch: 'full' },
@@ -40,6 +45,11 @@ const unitCalculatorRoutes: Routes = [
   { path: 'length-converter', component: LengthConverterComponent, data: { title: 'Distance and Length Converter: Calculator for K/m, Meters, Miles, And More' } },
   { path: 'mass-converter', component: MassConverterComponent, data: { title: 'Weight &amp; Mass Converter from Kg to Pounds to Ounce to Gram' } },
   { path: 'plane-angle-converter', component: PlaneAngleConverterComponent, data: { title: 'Plane Angle Unit Converter: Online Calculate Degree, Radian, Grade' } },
+  { path: 'pressure-converter', component: PressureConverterComponent, data: { title: 'Pressure Converter: Free Online Pressure Unit Calculator' } },
+  { path: 'speed-converter', component: SpeedConverterComponent, data: { title: 'Speed Calculator: Online Speed &amp; Velocity Unit Free Calculator' } },
+  { path: 'temperature-converter', component: TemperatureConverterComponent, data: { title: 'Online Temperature Converter: Fahrenheit(°F), Celsius(°C)' } },
+  { path: 'time-converter', component: TimeConverterComponent, data: { title: 'Time Zone Converter: Convert One Time Zone to Another Time Zone' } },
+  { path: 'volume-converter', component: VolumeConverterComponent, data: { title: 'Volume Converter: Free Online Volume Conversion Calculator' } },
 ];
 
 const routes: Routes = [
