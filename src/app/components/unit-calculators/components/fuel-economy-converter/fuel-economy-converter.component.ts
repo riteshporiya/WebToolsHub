@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { unitOptionDataArray } from '../unit-calculators/unit-data';
+import { unitOptionDataArray } from '../../unit-data';
 
 @Component({
-  selector: 'app-mass-converter',
-  templateUrl: './mass-converter.component.html',
-  styleUrls: ['./mass-converter.component.scss']
+  selector: 'app-fuel-economy-converter',
+  templateUrl: './fuel-economy-converter.component.html',
+  styleUrls: ['./fuel-economy-converter.component.scss']
 })
-export class MassConverterComponent {
-  unitOptions = unitOptionDataArray['mass-unit-converter'].unitOption;
+export class FuelEconomyConverterComponent {
+  unitOptions = unitOptionDataArray['fuel-economics-unit-converter'].unitOption;
   inputValue = 1;
   outputValue = 0;
   fromUnit = this.unitOptions[0];

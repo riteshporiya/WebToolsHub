@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { unitOptionDataArray } from '../unit-calculators/unit-data';
+import { unitOptionDataArray } from '../../unit-data';
 
 @Component({
-  selector: 'app-temperature-converter',
-  templateUrl: './temperature-converter.component.html',
-  styleUrls: ['./temperature-converter.component.scss']
+  selector: 'app-frequency-converter',
+  templateUrl: './frequency-converter.component.html',
+  styleUrls: ['./frequency-converter.component.scss']
 })
-export class TemperatureConverterComponent {
-  unitOptions = unitOptionDataArray['temperature-unit-converter'].unitOption;
+export class FrequencyConverterComponent {
+  unitOptions = unitOptionDataArray['frequency-unit-converter'].unitOption;
   inputValue = 1;
   outputValue = 0;
   fromUnit = this.unitOptions[0];

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { unitOptionDataArray } from '../unit-calculators/unit-data';
+import { unitOptionDataArray } from '../../unit-data';
 
 @Component({
-  selector: 'app-time-converter',
-  templateUrl: './time-converter.component.html',
-  styleUrls: ['./time-converter.component.scss']
+  selector: 'app-pressure-converter',
+  templateUrl: './pressure-converter.component.html',
+  styleUrls: ['./pressure-converter.component.scss']
 })
-export class TimeConverterComponent {
-  unitOptions = unitOptionDataArray['time-unit-converter'].unitOption;
+export class PressureConverterComponent {
+  unitOptions = unitOptionDataArray['pressure-unit-converter'].unitOption;
   inputValue = 1;
   outputValue = 0;
   fromUnit = this.unitOptions[0];

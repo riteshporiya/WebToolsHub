@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { unitOptionDataArray } from '../unit-calculators/unit-data';
+import { unitOptionDataArray } from '../../unit-data';
 
 @Component({
-  selector: 'app-volume-converter',
-  templateUrl: './volume-converter.component.html',
-  styleUrls: ['./volume-converter.component.scss']
+  selector: 'app-plane-angle-converter',
+  templateUrl: './plane-angle-converter.component.html',
+  styleUrls: ['./plane-angle-converter.component.scss']
 })
-export class VolumeConverterComponent {
-  unitOptions = unitOptionDataArray['volume-unit-converter'].unitOption;
+export class PlaneAngleConverterComponent {
+  unitOptions = unitOptionDataArray['plane-angle-unit-converter'].unitOption;
   inputValue = 1;
   outputValue = 0;
   fromUnit = this.unitOptions[0];

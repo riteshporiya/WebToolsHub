@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { unitOptionDataArray } from '../unit-calculators/unit-data';
+import { unitOptionDataArray } from '../../unit-data';
 
 @Component({
-  selector: 'app-speed-converter',
-  templateUrl: './speed-converter.component.html',
-  styleUrls: ['./speed-converter.component.scss']
+  selector: 'app-energy-converter',
+  templateUrl: './energy-converter.component.html',
+  styleUrls: ['./energy-converter.component.scss']
 })
-export class SpeedConverterComponent {
-  unitOptions = unitOptionDataArray['speed-unit-converter'].unitOption;
+export class EnergyConverterComponent {
+  unitOptions = unitOptionDataArray['energy-unit-converter'].unitOption;
   inputValue = 1;
   outputValue = 0;
   fromUnit = this.unitOptions[0];

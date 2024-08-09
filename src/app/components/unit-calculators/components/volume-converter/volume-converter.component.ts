@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { unitOptionDataArray } from '../unit-calculators/unit-data';
+import { unitOptionDataArray } from '../../unit-data';
 
 @Component({
-  selector: 'app-fuel-economy-converter',
-  templateUrl: './fuel-economy-converter.component.html',
-  styleUrls: ['./fuel-economy-converter.component.scss']
+  selector: 'app-volume-converter',
+  templateUrl: './volume-converter.component.html',
+  styleUrls: ['./volume-converter.component.scss']
 })
-export class FuelEconomyConverterComponent {
-  unitOptions = unitOptionDataArray['fuel-economics-unit-converter'].unitOption;
+export class VolumeConverterComponent {
+  unitOptions = unitOptionDataArray['volume-unit-converter'].unitOption;
   inputValue = 1;
   outputValue = 0;
   fromUnit = this.unitOptions[0];

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { unitOptionDataArray } from '../unit-calculators/unit-data';
+import { unitOptionDataArray } from '../../unit-data';
 
 @Component({
-  selector: 'app-pressure-converter',
-  templateUrl: './pressure-converter.component.html',
-  styleUrls: ['./pressure-converter.component.scss']
+  selector: 'app-temperature-converter',
+  templateUrl: './temperature-converter.component.html',
+  styleUrls: ['./temperature-converter.component.scss']
 })
-export class PressureConverterComponent {
-  unitOptions = unitOptionDataArray['pressure-unit-converter'].unitOption;
+export class TemperatureConverterComponent {
+  unitOptions = unitOptionDataArray['temperature-unit-converter'].unitOption;
   inputValue = 1;
   outputValue = 0;
   fromUnit = this.unitOptions[0];

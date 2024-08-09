@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { unitOptionDataArray } from '../unit-calculators/unit-data';
+import { unitOptionDataArray } from '../../unit-data';
 
 @Component({
-  selector: 'app-length-converter',
-  templateUrl: './length-converter.component.html',
-  styleUrls: ['./length-converter.component.scss']
+  selector: 'app-time-converter',
+  templateUrl: './time-converter.component.html',
+  styleUrls: ['./time-converter.component.scss']
 })
-export class LengthConverterComponent {
-  unitOptions = unitOptionDataArray['length-unit-converter'].unitOption;
+export class TimeConverterComponent {
+  unitOptions = unitOptionDataArray['time-unit-converter'].unitOption;
   inputValue = 1;
   outputValue = 0;
   fromUnit = this.unitOptions[0];

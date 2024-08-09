@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { unitOptionDataArray } from '../unit-calculators/unit-data';
+import { unitOptionDataArray } from '../../unit-data';
 
 @Component({
-  selector: 'app-plane-angle-converter',
-  templateUrl: './plane-angle-converter.component.html',
-  styleUrls: ['./plane-angle-converter.component.scss']
+  selector: 'app-mass-converter',
+  templateUrl: './mass-converter.component.html',
+  styleUrls: ['./mass-converter.component.scss']
 })
-export class PlaneAngleConverterComponent {
-  unitOptions = unitOptionDataArray['plane-angle-unit-converter'].unitOption;
+export class MassConverterComponent {
+  unitOptions = unitOptionDataArray['mass-unit-converter'].unitOption;
   inputValue = 1;
   outputValue = 0;
   fromUnit = this.unitOptions[0];
