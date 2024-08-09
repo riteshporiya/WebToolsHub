@@ -33,6 +33,7 @@ import { SpeedConverterComponent } from './components/unit-calculators/component
 import { TemperatureConverterComponent } from './components/unit-calculators/components/temperature-converter/temperature-converter.component';
 import { TimeConverterComponent } from './components/unit-calculators/components/time-converter/time-converter.component';
 import { VolumeConverterComponent } from './components/unit-calculators/components/volume-converter/volume-converter.component';
+import { AgeCalculatorComponent } from './components/age-calculator/age-calculator.component';
 
 const unitCalculatorRoutes: Routes = [
   { path: '', redirectTo: 'area-unit-converter', pathMatch: 'full' },
@@ -72,6 +73,7 @@ const routes: Routes = [
   { path: 'html-formatter', component: HtmlFormatterComponent, data: { title: 'HTML Formatter | HTML Code Beautifier' } },
   { path: 'case-converter', component: CaseConverterComponent, data: { title: 'Case Converter | Convert Uppercase to Lowercase' } },
   { path: 'json-parser', component: JsonParserComponent, data: { title: 'JSON Parser' } },
+  { path: 'age-calculator', component: AgeCalculatorComponent, data: { title: 'Age Calculator | Calculate Age in year, Month and day' } },
 ];
 
 @NgModule({

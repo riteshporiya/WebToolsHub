@@ -29,6 +29,7 @@ export class ToolsListComponent {
     { name: 'CSS Formatter', icon: 'bi-filetype-css', route: '/css-formatter' },
     { name: 'HTML Formatter', icon: 'bi-filetype-html', route: '/html-formatter' },
     { name: 'Case Converter', icon: 'bi-alphabet-uppercase', route: '/case-converter' },
-    { name: 'JSON Parser', icon: 'bi-filetype-json', route: '/json-parser' }
+    { name: 'JSON Parser', icon: 'bi-filetype-json', route: '/json-parser' },
+    { name: 'Age Calculator', icon: 'bi bi-cake2-fill', route: '/age-calculator' }
   ];
 }

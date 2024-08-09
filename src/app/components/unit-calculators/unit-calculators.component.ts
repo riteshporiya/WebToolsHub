@@ -16,7 +16,7 @@ export class UnitCalculatorsComponent {
     { name: 'Frequency', icon: 'activity', route: 'frequency-converter' },
     { name: 'Fuel Economy', icon: 'fuel-pump', route: 'fuel-economy-converter' },
     { name: 'Length', icon: 'rulers', route: 'length-converter' },
-    { name: 'Mass', icon: 'mass', route: 'mass-converter' },
+    { name: 'Mass', icon: 'bi bi-mask', route: 'mass-converter' },
     { name: 'Plane Angle', icon: 'triangle', route: 'plane-angle-converter' },
     { name: 'Pressure', icon: 'speedometer', route: 'pressure-converter' },
     { name: 'Speed', icon: 'speedometer2', route: 'speed-converter' },

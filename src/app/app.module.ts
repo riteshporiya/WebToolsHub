@@ -43,6 +43,7 @@ import { SpeedConverterComponent } from './components/unit-calculators/component
 import { TemperatureConverterComponent } from './components/unit-calculators/components/temperature-converter/temperature-converter.component';
 import { TimeConverterComponent } from './components/unit-calculators/components/time-converter/time-converter.component';
 import { VolumeConverterComponent } from './components/unit-calculators/components/volume-converter/volume-converter.component';
+import { AgeCalculatorComponent } from './components/age-calculator/age-calculator.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { VolumeConverterComponent } from './components/unit-calculators/componen
     SpeedConverterComponent,
     TemperatureConverterComponent,
     TimeConverterComponent,
-    VolumeConverterComponent
+    VolumeConverterComponent,
+    AgeCalculatorComponent
   ],
   imports: [
     BrowserModule,

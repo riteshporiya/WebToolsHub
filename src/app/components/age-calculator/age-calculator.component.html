@@ -1,0 +1,91 @@
+<div class="container mt-5">
+    <h1 class=" text-center mb-3">Age Calculator</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title mb-4">Age Calculator</h5>
+
+            <div class="mb-3 row">
+                <label for="dob" class="col-sm-3 col-form-label">Date Of Birth</label>
+                <div class="col-sm-9">
+                    <input type="date" class="form-control" id="dob" [(ngModel)]="dateOfBirth">
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="ageDate" class="col-sm-3 col-form-label">Age at the Date of</label>
+                <div class="col-sm-9">
+                    <input type="date" class="form-control" id="ageDate" [(ngModel)]="ageAtDate">
+                </div>
+            </div>
+
+            <button class="btn btn-primary" (click)="calculateAge()">Calculate</button>
+
+            <div *ngIf="ageResult" class="mt-4">
+                <h6 class="text-center bg-light p-2">
+                    YOUR AGE:
+                    <span *ngIf="ageResult.years > 0">{{ ageResult.years }} YEARS</span>
+                    <span *ngIf="ageResult.months > 0">
+                        <ng-container *ngIf="ageResult.years > 0">,</ng-container>
+                        {{ ageResult.months }} MONTHS
+                    </span>
+                    <span *ngIf="ageResult.weeks > 0">
+                        <ng-container *ngIf="ageResult.years > 0 || ageResult.months > 0">,</ng-container>
+                        {{ ageResult.weeks }} WEEKS
+                    </span>
+                    <span *ngIf="ageResult.days > 0">
+                        <ng-container *ngIf="ageResult.years > 0 || ageResult.months > 0 || ageResult.weeks > 0"> AND
+                        </ng-container>
+                        {{ ageResult.days }} DAYS
+                    </span>
+                </h6>
+
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr *ngIf="ageResult.totalMonths > 0 || ageResult.weeks > 0 || ageResult.days > 0">
+                            <td>Age in Months</td>
+                            <td>
+                                <span *ngIf="ageResult.totalMonths > 0">{{ ageResult.totalMonths }} Months</span>
+                                <span *ngIf="ageResult.weeks > 0">
+                                    <ng-container *ngIf="ageResult.totalMonths > 0">,</ng-container>
+                                    {{ ageResult.weeks }} Weeks
+                                </span>
+                                <span *ngIf="ageResult.days > 0">
+                                    <ng-container
+                                        *ngIf="ageResult.totalMonths > 0 || ageResult.weeks > 0">,</ng-container>
+                                    {{ ageResult.days }} Days
+                                </span>
+                            </td>
+                        </tr>
+                        <tr *ngIf="ageResult.totalWeeks > 0 || ageResult.days > 0">
+                            <td>Age in Weeks</td>
+                            <td>
+                                <span *ngIf="ageResult.totalWeeks > 0">{{ ageResult.totalWeeks }} Weeks</span>
+                                <span *ngIf="ageResult.days > 0">
+                                    <ng-container *ngIf="ageResult.totalWeeks > 0">,</ng-container>
+                                    {{ ageResult.days }} Days
+                                </span>
+                            </td>
+                        </tr>
+                        <tr *ngIf="ageResult.totalDays > 0">
+                            <td>Age in Days</td>
+                            <td>{{ ageResult.totalDays }}</td>
+                        </tr>
+                        <tr *ngIf="ageResult.totalHours > 0">
+                            <td>Age in Hours</td>
+                            <td>{{ ageResult.totalHours }}</td>
+                        </tr>
+                        <tr *ngIf="ageResult.totalMinutes > 0">
+                            <td>Age in Minutes</td>
+                            <td>{{ ageResult.totalMinutes }}</td>
+                        </tr>
+                        <tr *ngIf="ageResult.totalSeconds > 0">
+                            <td>Age in Seconds</td>
+                            <td>{{ ageResult.totalSeconds }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
