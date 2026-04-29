@@ -1,8 +1,8 @@
-# WebToolHub 🛠️
+# WebToolHub ð ï¸
 
-Welcome to the **WebToolHub** repository! This project is a collection of various free online tools built with Angular and Bootstrap. Explore a range of utilities, each designed to make your tasks easier and more efficient. 🚀✨
+Welcome to the **WebToolHub** repository! This project is a collection of various free online tools built with Angular and Bootstrap. Explore a range of utilities, each designed to make your tasks easier and more efficient. ðâ¨
 
-## Features 🌟
+## Features ð
 
 - **Character Counter**: Count the number of characters in your text.
 - **Password Generator**: Create strong, random passwords for better security.
@@ -19,7 +19,7 @@ Welcome to the **WebToolHub** repository! This project is a collection of variou
 - **Case Converter**: Convert text between different cases.
 - **JSON Parser**: Parse JSON data effortlessly.
 
-## Future Enhancements 🌠
+## Future Enhancements ð 
 
 - Integration with additional tools.
 - Enhanced user interface and user experience.
@@ -28,7 +28,7 @@ Welcome to the **WebToolHub** repository! This project is a collection of variou
 - Local storage to save user preferences.
 - Additional formatting tools for different data types.
 
-## Getting Started 🛠️
+## Getting Started ð ï¸
 
 Follow these instructions to get a copy of the project up and running on your local machine.
 
@@ -57,7 +57,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 4. Open your browser and navigate to `http://localhost:4200`.
 
-## Usage 📖
+## Usage ð
 
 Explore the various tools available on WebToolHub:
 
@@ -65,17 +65,19 @@ Explore the various tools available on WebToolHub:
 - Each tool provides a specific functionality as described in the Features section.
 - Enjoy the user-friendly and responsive interface.
 
-## Contributing 🤝
+## Contributing ð¤
 
 Contributions are welcome! Please open an issue or submit a pull request for any changes or enhancements you would like to see.
 
-## License 📄
+## License ð
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments 🙏
+## Acknowledgments ð
 
 - Inspired by the need for simple and efficient online tools.
 - Built with Angular and Bootstrap.
 
-Happy coding! 🎉
+Happy coding! ð
+
+* [Remove audio from video](https://remove-audio.com) - Free, browser-based audio remover. Local processing via WebAssembly. No signup, no watermarks. Batch up to 20 clips.
